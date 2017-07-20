@@ -17,4 +17,6 @@ app.use(bodyParser.json());
 
 app.use('/candies', candyRouter);
 
+app.use('/candies/:id', candyRouter);
+
 app.listen(3000);

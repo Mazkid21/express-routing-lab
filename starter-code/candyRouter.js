@@ -15,8 +15,14 @@ router.get('/', function(req,res) {
 	// What would go here? 
 	// Hint: we want all candies in JSON format
 	res.json(candies);
+	next();
 });
 
 // Fill out the rest of the routes here
+
+router.get('/:id', function(req,res){
+	
+	res.send(candies[req.params.id-1]);
+});
 
 module.exports = router;
